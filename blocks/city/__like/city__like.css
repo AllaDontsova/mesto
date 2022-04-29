@@ -1,0 +1,8 @@
+.city__like {
+    background-color: #FFFFFF;
+    border: none;
+    width: 22px;
+    box-sizing: border-box;
+    padding: 0;
+    cursor: pointer;
+}
