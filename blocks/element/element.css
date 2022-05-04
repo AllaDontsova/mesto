@@ -1,4 +1,15 @@
 .element {
-    background: #FFFFFF;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: #fff;
     border-radius: 10px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1140px) {
+    .element {
+        justify-self: center;
+        width: 100%;
+    }
 }

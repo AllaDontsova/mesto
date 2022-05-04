@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pages/index.css">
-    <script defer src="./scripts/popup.js"></script>
     <title>Место</title>
 </head>
 
@@ -28,54 +27,54 @@
         <section class="elements">
             <article class="element">
                 <img src="images/Berlin.jpg" class="element__item" alt="Берлин">
-                <div class="city">
-                    <p class="city__title">Берлин</p>
-                    <button type="button" class="city__like">
+                <div class="element__info">
+                    <h2 class="element__title">Берлин</h2>
+                    <button type="button" class="element__like">
                         <img src="images/Heart.svg" alt="Кнопка_Нравится">
                     </button>
                 </div>
             </article>
             <article class="element">
                 <img src="images/Bavaria_Schvangau.jpg" class="element__item" alt="Бавария_Швангау">
-                <div class="city">
-                    <p class="city__title">Швангау</p>
-                    <button type="button" class="city__like">
+                <div class="element__info">
+                    <h2 class="element__title">Швангау</h2>
+                    <button type="button" class="element__like">
                         <img src="images/Heart.svg" alt="Кнопка_Нравится">
                     </button>
                 </div>
             </article>
             <article class="element">
                 <img src="images/Frankfurt_am_main.jpg" class="element__item" alt="Франкфурт-на-Майне">
-                <div class="city">
-                    <p class="city__title">Франкфурт-на-Майне</p>
-                    <button type="button" class="city__like">
+                <div class="element__info">
+                    <h2 class="element__title">Франкфурт-на-Майне</h2>
+                    <button type="button" class="element__like">
                         <img src="images/Heart.svg" alt="Кнопка_Нравится">
                     </button>
                 </div>
             </article>
             <article class="element">
                 <img src="images/Hamburg.jpg" class="element__item" alt="Гамбург">
-                <div class="city">
-                    <p class="city__title">Гамбург</p>
-                    <button type="button" class="city__like">
+                <div class="element__info">
+                    <h2 class="element__title">Гамбург</h2>
+                    <button type="button" class="element__like">
                         <img src="images/Heart.svg" alt="Кнопка_Нравится">
                     </button>
                 </div>
             </article>
             <article class="element">
                 <img src="images/Heidelberg.jpg" class="element__item" alt="Хейлдерберг">
-                <div class="city">
-                    <p class="city__title">Хейлдерберг</p>
-                    <button type="button" class="city__like">
+                <div class="element__info">
+                    <h2 class="element__title">Хейлдерберг</h2>
+                    <button type="button" class="element__like">
                         <img src="images/Heart.svg" alt="Кнопка_Нравится">
                     </button>
                 </div>
             </article>
             <article class="element">
                 <img src="images/Nurberg.jpg" class="element__item" alt="Нюрнберг">
-                <div class="city">
-                    <p class="city__title">Нюрнберг</p>
-                    <button type="button" class="city__like"><img src="images/Heart.svg" alt="Кнопка_Нравится">
+                <div class="element__info">
+                    <h2 class="element__title">Нюрнберг</h2>
+                    <button type="button" class="element__like"><img src="images/Heart.svg" alt="Кнопка_Нравится">
                     </button>
                 </div>
             </article>
@@ -84,21 +83,22 @@
     <footer class="footer">
         <p class="footer__copyright">©&nbsp;2020&nbsp;Mesto&nbsp;Russia</p>
     </footer>
-    <div class="popup">
-        <button type="button" class="popup__close">
-            <img src="images/CloseIcon.svg" alt="Крестик">
-        </button>
-        <form class="popup__container">
-            <h1 class="popup__heading">Редактировать профиль</h1>
-            <div class="popup__form">
-                <input type="text" placeholder="Имя" class="popup__form popup__form_name" value="Имя">
-                <input type="text" placeholder="О себе" class="popup__form popup__form_job" value="О себе">
-            </div>
-            <button class="popup__save">
-                <span class="popup__save popup__save_text">Сохранить</span>
-            </button>
-        </form>
+    <div class="popup popup__cover">
+            <form name="profile" class="popup__container">
+                <button type="button" class="popup__close">
+                    <img src="images/CloseButton.svg" alt="Крестик">
+                </button>
+                <h3 class="popup__heading">Редактировать профиль</h3>
+                <div class="popup__form">
+                    <input name="PersonName" type="text" placeholder="Имя" class="popup__form popup__form_name"
+                        value="Имя">
+                    <input name="PersonJob" type="text" placeholder="О себе" class="popup__form popup__form_job"
+                        value="О себе">
+                </div>
+                <button type="submit" class="popup__save"></button>
+            </form>
     </div>
+    <script src="./scripts/script.js"></script>
 </body>
 
 

@@ -1,20 +1,20 @@
 .popup__close {
     position: absolute;
-    right: -53px;
-    left: 440px;
-    bottom: 82%;
+    right: -45px;
+    top: -40px;
     background-color: transparent;
     border: none;
     cursor: pointer;
     transition: opacity ease-in;
+    padding: 0;
 }
 
 .popup__close:hover {
     opacity: 0.6;
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 350px) {
     .popup__close {
-        left: 55%;
+        right: 0px;
     }
 }

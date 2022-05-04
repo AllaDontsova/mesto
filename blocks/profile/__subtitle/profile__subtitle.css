@@ -3,9 +3,19 @@
     font-size: 18px;
     line-height: 22px;
     margin: 16px 0 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 336px;
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 794px) {
+    .profile__subtitle {
+        margin: 14px 0 0;
+    }
+}
+
+@media screen and (max-width: 788px) {
     .profile__subtitle {
         font-weight: 400;
         font-size: 14px;

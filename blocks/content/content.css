@@ -1,12 +1,10 @@
-.content {
-    margin: 40px 200px 57px;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
+.content {    
+    max-width: 880px;
+    margin: 0 auto;
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 940px) {
     .content {
-        margin: 42px 19px 48px;
+        margin: 0 19px;
     }
 }
