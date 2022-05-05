@@ -17,7 +17,7 @@
             <img class="profile__avatar" src="images/Avatar.jpg" alt="Жав-ив Кусто_Аватар">
             <div class="profile__info">
                 <div class="profile__title">
-                    <p class="profile__name">Жак-Ив Кусто</p>
+                    <h1 class="profile__name">Жак-Ив Кусто</h1>
                     <button type="button" class="profile__edit-button"></button>
                 </div>
                 <p class="profile__subtitle">Исследователь океана</p>
@@ -84,19 +84,16 @@
         <p class="footer__copyright">©&nbsp;2020&nbsp;Mesto&nbsp;Russia</p>
     </footer>
     <div class="popup">
-            <form name="profile" class="popup__container">
-                <button type="button" class="popup__close">
-                    <img src="images/CloseButton.svg" alt="Крестик">
-                </button>
-                <h3 class="popup__heading">Редактировать профиль</h3>
-                <div class="popup__form">
-                    <input name="PersonName" type="text" placeholder="Имя" class="popup__form popup__form_name"
-                        value="Имя">
-                    <input name="PersonJob" type="text" placeholder="О себе" class="popup__form popup__form_job"
-                        value="О себе">
-                </div>
+        <form name="profile" class="popup__container">
+            <button type="button" class="popup__close"></button>
+            <h3 class="popup__heading">Редактировать профиль</h3>
+            <div class="popup__form">
+                <input name="PersonName" type="text" placeholder="Имя" class="popup__form popup__form_name" value="Имя">
+                <input name="PersonJob" type="text" placeholder="О себе" class="popup__form popup__form_job"
+                    value="О себе">
                 <button type="submit" class="popup__save"></button>
-            </form>
+            </div>
+        </form>
     </div>
     <script src="./scripts/script.js"></script>
 </body>

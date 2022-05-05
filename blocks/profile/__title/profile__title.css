@@ -8,9 +8,6 @@
 
 @media screen and (max-width: 568px) {
     .profile__title {
-        font-weight: 500;
-        font-size: 27px;
-        line-height: 33px;
-        text-align: center;
+        margin: 0px 0 0 29px;
     }
 }

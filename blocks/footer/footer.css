@@ -1,12 +1,12 @@
 .footer {
     min-height: 18px;
-    margin: 0 auto;
+    margin: 66px auto 60px;
     max-width: 880px;
 }
 
 @media screen and (max-width: 940px) {
     .footer {
         min-height: 14px;
-        margin: 0 19px;
+        margin: 48px 19px 36px
     }
 }
