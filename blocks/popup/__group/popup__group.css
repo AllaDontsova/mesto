@@ -1,0 +1,17 @@
+.popup__group {
+    min-width: 433px;
+    max-height: 562px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 15%;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+@media screen and (max-width: 568px) {
+    .popup__group {
+        min-width: 240px;
+        max-height: 311px;
+    }
+}

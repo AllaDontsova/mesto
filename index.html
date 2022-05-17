@@ -24,76 +24,82 @@
             </div>
             <button type="button" class="profile__add-button"></button>
         </section>
-        <section class="elements">
+        <div class="elements"></div>
+        <template id="cards">
+            <article class="element">
+                <button class="element__trash"></button>
+                <img class="element__item" alt="Фото">
+                <div class="element__info">
+                    <h2 class="element__title"></h2>
+                    <button type="button" class="element__like"></button>
+                </div>
+            </article>
+        </template>
+        <!--<section class="elements">
             <article class="element">
                 <img src="images/Berlin.jpg" class="element__item" alt="Берлин">
                 <div class="element__info">
                     <h2 class="element__title">Берлин</h2>
-                    <button type="button" class="element__like">
-                        <img src="images/Heart.svg" alt="Кнопка_Нравится">
-                    </button>
+                    <button type="button" class="element__like"></button>
                 </div>
             </article>
             <article class="element">
                 <img src="images/Bavaria_Schvangau.jpg" class="element__item" alt="Бавария_Швангау">
                 <div class="element__info">
                     <h2 class="element__title">Швангау</h2>
-                    <button type="button" class="element__like">
-                        <img src="images/Heart.svg" alt="Кнопка_Нравится">
-                    </button>
+                    <button type="button" class="element__like"></button>
                 </div>
             </article>
             <article class="element">
                 <img src="images/Frankfurt_am_main.jpg" class="element__item" alt="Франкфурт-на-Майне">
                 <div class="element__info">
                     <h2 class="element__title">Франкфурт-на-Майне</h2>
-                    <button type="button" class="element__like">
-                        <img src="images/Heart.svg" alt="Кнопка_Нравится">
-                    </button>
+                    <button type="button" class="element__like"></button>
                 </div>
             </article>
             <article class="element">
                 <img src="images/Hamburg.jpg" class="element__item" alt="Гамбург">
                 <div class="element__info">
                     <h2 class="element__title">Гамбург</h2>
-                    <button type="button" class="element__like">
-                        <img src="images/Heart.svg" alt="Кнопка_Нравится">
-                    </button>
+                    <button type="button" class="element__like"></button>
                 </div>
             </article>
             <article class="element">
                 <img src="images/Heidelberg.jpg" class="element__item" alt="Хейлдерберг">
                 <div class="element__info">
                     <h2 class="element__title">Хейлдерберг</h2>
-                    <button type="button" class="element__like">
-                        <img src="images/Heart.svg" alt="Кнопка_Нравится">
-                    </button>
+                    <button type="button" class="element__like"></button>
                 </div>
             </article>
             <article class="element">
                 <img src="images/Nurberg.jpg" class="element__item" alt="Нюрнберг">
                 <div class="element__info">
                     <h2 class="element__title">Нюрнберг</h2>
-                    <button type="button" class="element__like"><img src="images/Heart.svg" alt="Кнопка_Нравится">
-                    </button>
+                    <button type="button" class="element__like"></button>
                 </div>
             </article>
-        </section>
+        </section>-->
     </main>
     <footer class="footer">
         <p class="footer__copyright">©&nbsp;2020&nbsp;Mesto&nbsp;Russia</p>
     </footer>
-    <div class="popup">
+    <div id="popupInfo" class="popup">
         <form name="profile" class="popup__container">
-            <button type="button" class="popup__close"></button>
-            <h3 class="popup__heading">Редактировать профиль</h3>
+            <button id="closePopup" type="button" class="popup__close"></button>
+            <h3 class="popup__heading"></h3>
             <div class="popup__form">
-                <input name="PersonName" type="text" placeholder="Имя" class="popup__form popup__form_name" value="Имя">
-                <input name="PersonJob" type="text" placeholder="О себе" class="popup__form popup__form_job"
-                    value="О себе">
+                <input id="firstInput" name="text" type="text" class="popup__form popup__form_text">
+                <input id="secondInput" name="text" type="text" class="popup__form popup__form_text">
                 <button type="submit" class="popup__save"></button>
             </div>
         </form>
+    </div>
+    <div id="popupImage" class="popup">
+        <div class="popup__group">
+            <button id="closeImage" type="button" class="popup__close"></button>
+            <img class="popup__image" src="#" alt="Фото">
+            <h4 class="popup__title"></h4>
+        </div>
     </div>
     <script src="./scripts/script.js"></script>
 </body>

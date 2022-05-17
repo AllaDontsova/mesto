@@ -5,6 +5,8 @@
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
+    justify-content: space-between;
+    position: relative;
 }
 
 @media screen and (max-width: 1140px) {

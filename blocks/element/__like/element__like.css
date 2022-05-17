@@ -1,8 +1,17 @@
 .element__like {
-    background-color: #FFFFFF;
+    min-width: 22px;
+    max-height: 19px;
+    background-color: transparent;
     border: none;
     width: 22px;
     box-sizing: border-box;
     padding: 0;
     cursor: pointer;
+    background-image: url(../../../images/Heart.svg);
+    background-repeat: no-repeat;
+    transition: opacity ease-in;
+}
+
+.element__like:hover {
+    opacity: 0.5;
 }

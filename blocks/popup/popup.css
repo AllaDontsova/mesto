@@ -1,5 +1,5 @@
 .popup {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -7,6 +7,9 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s linear;
 }
 
 @media screen and (max-width: 568px) {
