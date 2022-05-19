@@ -5,7 +5,7 @@
     transition: opacity ease-in;
     cursor: pointer;
     border: none;
-    /* background-image: url(../../../images/SubmitButton.svg); */
+    background-image: url(../../../images/SubmitButton.svg);
     background-position: center;
     background-repeat: no-repeat;
     padding: 0;

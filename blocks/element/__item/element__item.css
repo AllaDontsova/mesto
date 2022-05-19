@@ -2,4 +2,10 @@
     max-height: 282px;
     object-fit: cover;
     height: 100%;
+    transition: opacity ease-in;
+    cursor: pointer;
+}
+
+.element__item:hover {
+    opacity: 0.6;
 }

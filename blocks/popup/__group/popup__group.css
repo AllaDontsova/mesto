@@ -12,6 +12,9 @@
 @media screen and (max-width: 568px) {
     .popup__group {
         min-width: 240px;
-        max-height: 311px;
+        position: absolute;
+        top: 50%;
+        left: 13%;
+        transform: translate(0, -50%);
     }
 }

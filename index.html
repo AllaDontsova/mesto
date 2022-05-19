@@ -35,72 +35,40 @@
                 </div>
             </article>
         </template>
-        <!--<section class="elements">
-            <article class="element">
-                <img src="images/Berlin.jpg" class="element__item" alt="Берлин">
-                <div class="element__info">
-                    <h2 class="element__title">Берлин</h2>
-                    <button type="button" class="element__like"></button>
-                </div>
-            </article>
-            <article class="element">
-                <img src="images/Bavaria_Schvangau.jpg" class="element__item" alt="Бавария_Швангау">
-                <div class="element__info">
-                    <h2 class="element__title">Швангау</h2>
-                    <button type="button" class="element__like"></button>
-                </div>
-            </article>
-            <article class="element">
-                <img src="images/Frankfurt_am_main.jpg" class="element__item" alt="Франкфурт-на-Майне">
-                <div class="element__info">
-                    <h2 class="element__title">Франкфурт-на-Майне</h2>
-                    <button type="button" class="element__like"></button>
-                </div>
-            </article>
-            <article class="element">
-                <img src="images/Hamburg.jpg" class="element__item" alt="Гамбург">
-                <div class="element__info">
-                    <h2 class="element__title">Гамбург</h2>
-                    <button type="button" class="element__like"></button>
-                </div>
-            </article>
-            <article class="element">
-                <img src="images/Heidelberg.jpg" class="element__item" alt="Хейлдерберг">
-                <div class="element__info">
-                    <h2 class="element__title">Хейлдерберг</h2>
-                    <button type="button" class="element__like"></button>
-                </div>
-            </article>
-            <article class="element">
-                <img src="images/Nurberg.jpg" class="element__item" alt="Нюрнберг">
-                <div class="element__info">
-                    <h2 class="element__title">Нюрнберг</h2>
-                    <button type="button" class="element__like"></button>
-                </div>
-            </article>
-        </section>-->
     </main>
     <footer class="footer">
         <p class="footer__copyright">©&nbsp;2020&nbsp;Mesto&nbsp;Russia</p>
     </footer>
-    <div id="popupInfo" class="popup">
-        <form name="profile" class="popup__container">
-            <button id="closePopup" type="button" class="popup__close"></button>
-            <h3 class="popup__heading"></h3>
+    <div id="popup-profile" class="popup">
+        <form id="profileContainer" name="profile" class="popup__container">
+            <button id="closePopupProfile" type="button" class="popup__close"></button>
+            <h3 class="popup__heading">Редактировать профиль</h3>
             <div class="popup__form">
-                <input id="firstInput" name="text" type="text" class="popup__form popup__form_text">
-                <input id="secondInput" name="text" type="text" class="popup__form popup__form_text">
+                <input id="InputName" placeholder="Имя" name="text" type="text" class="popup__form popup__form_text">
+                <input id="InputPersonalInfo" placeholder="О себе" name="text" type="text" class="popup__form popup__form_text">
                 <button type="submit" class="popup__save"></button>
             </div>
         </form>
     </div>
-    <div id="popupImage" class="popup">
+    <div id="popup-addCard" class="popup">
+        <form id="addCardContainer" name="profile" class="popup__container">
+            <button id="closePopupAdd" type="button" class="popup__close"></button>
+            <h3 class="popup__heading">Новое место</h3>
+            <div class="popup__form">
+                <input id="InputNameCard" placeholder="Название" name="text" type="text" class="popup__form popup__form_text">
+                <input id="InputLinkCard" placeholder="Сссылка на картинку" name="text" type="text" class="popup__form popup__form_text">
+                <button type="submit" class="popup__save popup__save_background"></button>
+            </div>
+        </form>
+    </div>
+    <div id="popupImage" class="popup popup_background-color">
         <div class="popup__group">
-            <button id="closeImage" type="button" class="popup__close"></button>
+            <button id="closeImage" type="button" class="popup__close popup__close_position"></button>
             <img class="popup__image" src="#" alt="Фото">
             <h4 class="popup__title"></h4>
         </div>
     </div>
+    <script src="./scripts/cards.js"></script>
     <script src="./scripts/script.js"></script>
 </body>
 
