@@ -113,7 +113,7 @@ function createCard(nameCardValue, linkCardValue) {
         cardToRemove.remove();
     });
     // Функция открытия попап-картинки
-    function OpenPopupImage() {
+    function openPopupImage() {
         openPopup(popupImage);
         const image = document.querySelector('.popup__image')
         image.src = linkCardValue;
@@ -121,6 +121,6 @@ function createCard(nameCardValue, linkCardValue) {
         title.textContent = nameCardValue;
         image.alt = `Фото ${nameCardValue}.`;
     }
-    img.addEventListener('click', OpenPopupImage);
+    img.addEventListener('click', openPopupImage);
     return element;
 }
