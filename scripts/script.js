@@ -32,7 +32,7 @@ function openPopupProfile() {
     openPopup(popupProfile);
     inputNamePopupProfile.value = profileName.textContent;
     inputPersonalInfoPopupProfile.value = profileSubtitle.textContent;
-    const inputList = Array.from(formProfileEdit.querySelector('.popup__form_text'));
+    const inputList = Array.from(formProfileEdit.querySelector('.popup__input'));
     const buttonSavePopup = formProfileEdit.querySelector('.popup__save');
     offPopupSaveBtn(inputList, buttonSavePopup, config);
 }

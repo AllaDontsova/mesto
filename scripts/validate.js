@@ -1,10 +1,10 @@
 // Объекты настроек
 const config = {
     formSelector: 'popup__container',
-    inputSelector: 'popup__form_text',
+    inputSelector: 'popup__input',
     submitButtonSelector: 'popup__save',
     inactiveButtonClass: 'popup__save_inactive',
-    inputErrorClass: 'popup__form_text_border-error',
+    inputErrorClass: 'popup__input_border-error',
     errorClass: 'popup__form-error_active'
 };
 

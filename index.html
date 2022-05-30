@@ -44,12 +44,12 @@
             <button id="closePopupProfile" type="button" class="popup__close"></button>
             <h3 class="popup__heading">Редактировать профиль</h3>
             <div class="popup__form">
-                <input id="InputName" placeholder="Имя" name="text" type="text" class="popup__form_text" minlength="2"
+                <input id="InputName" placeholder="Имя" name="text" type="text" class="popup__input" minlength="2"
                     maxlength="40" required>
-                    <span class="InputName-error popup__form-error"></span>
-                <input id="InputPersonalInfo" placeholder="О себе" name="text" type="text" class="popup__form_text"
+                <span class="InputName-error popup__form-error"></span>
+                <input id="InputPersonalInfo" placeholder="О себе" name="text" type="text" class="popup__input"
                     minlength="2" maxlength="200" required>
-                    <span class="InputPersonalInfo-error popup__form-error"></span>
+                <span class="InputPersonalInfo-error popup__form-error"></span>
                 <button type="submit" class="popup__save"></button>
             </div>
         </form>
@@ -59,11 +59,11 @@
             <button id="closePopupAdd" type="button" class="popup__close"></button>
             <h3 class="popup__heading">Новое место</h3>
             <div class="popup__form">
-                <input id="InputNameCard" placeholder="Название" name="text" type="text" class="popup__form_text"
+                <input id="InputNameCard" placeholder="Название" name="text" type="text" class="popup__input"
                     minlength="2" maxlength="30" required>
                 <span class="InputNameCard-error popup__form-error"></span>
-                <input id="InputLinkCard" type="url" placeholder="Ссылка на картинку" name="text"
-                    class="popup__form_text" required>
+                <input id="InputLinkCard" type="url" placeholder="Ссылка на картинку" name="text" class="popup__input"
+                    required>
                 <span class="InputLinkCard-error popup__form-error"></span>
                 <button type="submit" class="popup__save popup__save_background"></button>
             </div>
