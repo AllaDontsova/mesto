@@ -42,7 +42,16 @@
 @import url(../blocks/popup/__form/popup__form.css);
 @import url(../blocks/popup/__form/_text/popup__form_text.css);
 @import url(../blocks/popup/__save/popup__save.css);
+@import url(../blocks/popup/__save/_inactive/popup__save_inactive.css);
 @import url(../blocks/popup/__save/_background/popup__save_background.css);
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/__image/popup__image.css);
 @import url(../blocks/popup/__group/popup__group.css);
+@import url(../blocks/popup/__form-error/popup__form-error.css);
+@import url(../blocks/popup/__form-error/_active/popup__form-error_active.css);
+@import url(../blocks/InputName-error/InputName-error.css);
+@import url(../blocks/InputPersonalInfo-error/InputPersonalInfo-error.css);
+@import url(../blocks/InputNameCard-error/InputNameCard-error.css);
+@import url(../blocks/InputLinkCard-error/InputLinkCard-error.css);
+@import url(../blocks/error-text/error-text.css);
+@import url(../blocks/popup/__form/_text/_border-error/popup__form_text_border-error.css);

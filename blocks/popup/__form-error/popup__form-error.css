@@ -1,0 +1,7 @@
+.popup__form-error {
+    font-size: 12px;
+    color: red;
+    transition: 0.3s;
+    font-weight: 400;
+    line-height: 15px;
+}

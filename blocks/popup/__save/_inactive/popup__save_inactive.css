@@ -1,0 +1,9 @@
+#popup-profile .popup__save_inactive {
+   background-image: url(../../../../images/Submit_Button_Inactive.svg);
+   background-color: transparent;
+}
+
+#popup-addCard .popup__save_inactive {
+   background-image: url(../../../../images/Submit_BTN_AddCard_Inactive.svg);
+   background-color: transparent;
+}

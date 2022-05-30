@@ -1,3 +1,4 @@
 .popup__save_background {
-    background-image: url(../../../../images/CreateButton.svg);
+    background-image: url(../../../../images/CreateButton.svg);    
+    margin-top: 20px;
 }

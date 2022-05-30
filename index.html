@@ -40,25 +40,35 @@
         <p class="footer__copyright">©&nbsp;2020&nbsp;Mesto&nbsp;Russia</p>
     </footer>
     <div id="popup-profile" class="popup">
-        <form id="profileContainer" name="profile" class="popup__container">
+        <form id="profileContainer" name="profile" class="popup__container" novalidate>
             <button id="closePopupProfile" type="button" class="popup__close"></button>
             <h3 class="popup__heading">Редактировать профиль</h3>
             <div class="popup__form">
-                <input id="InputName" placeholder="Имя" name="text" type="text" class="popup__form popup__form_text">
-                <input id="InputPersonalInfo" placeholder="О себе" name="text" type="text" class="popup__form popup__form_text">
+                <input id="InputName" placeholder="Имя" name="text" type="text" class="popup__form_text" minlength="2"
+                    maxlength="40" required>
+                    <span class="InputName-error popup__form-error"></span>
+                <input id="InputPersonalInfo" placeholder="О себе" name="text" type="text" class="popup__form_text"
+                    minlength="2" maxlength="200" required>
+                    <span class="InputPersonalInfo-error popup__form-error"></span>
                 <button type="submit" class="popup__save"></button>
             </div>
         </form>
     </div>
     <div id="popup-addCard" class="popup">
-        <form id="addCardContainer" name="profile" class="popup__container">
+        <form id="addCardContainer" name="profile" class="popup__container" novalidate>
             <button id="closePopupAdd" type="button" class="popup__close"></button>
             <h3 class="popup__heading">Новое место</h3>
             <div class="popup__form">
-                <input id="InputNameCard" placeholder="Название" name="text" type="text" class="popup__form popup__form_text">
-                <input id="InputLinkCard" placeholder="Сссылка на картинку" name="text" type="text" class="popup__form popup__form_text">
+                <input id="InputNameCard" placeholder="Название" name="text" type="text" class="popup__form_text"
+                    minlength="2" maxlength="30" required>
+                <span class="InputNameCard-error popup__form-error"></span>
+                <input id="InputLinkCard" type="url" placeholder="Ссылка на картинку" name="text"
+                    class="popup__form_text" required>
+                <span class="InputLinkCard-error popup__form-error"></span>
                 <button type="submit" class="popup__save popup__save_background"></button>
             </div>
+
+
         </form>
     </div>
     <div id="popupImage" class="popup popup_background-color">
@@ -70,6 +80,7 @@
     </div>
     <script src="./scripts/cards.js"></script>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/validate.js"></script>
 </body>
 
 

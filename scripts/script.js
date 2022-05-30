@@ -16,6 +16,7 @@ const buttonClosePopupAddCard = document.querySelector('#closePopupAdd');
 const templateCard = document.querySelector('#cards');
 const cardsContainer = document.querySelector('.elements');
 const buttonClosePopupImage = document.querySelector('#closeImage');
+const popups = document.querySelectorAll('.popup');
 
 // Функции открытия и закрытия попапов
 function openPopup(popup) {
@@ -31,6 +32,9 @@ function openPopupProfile() {
     openPopup(popupProfile);
     inputNamePopupProfile.value = profileName.textContent;
     inputPersonalInfoPopupProfile.value = profileSubtitle.textContent;
+    const inputList = Array.from(formProfileEdit.querySelector('.popup__form_text'));
+    const buttonSavePopup = formProfileEdit.querySelector('.popup__save');
+    offPopupSaveBtn(inputList, buttonSavePopup, config);
 }
 
 // Функции для закрытия попап-профиль
@@ -123,4 +127,25 @@ function createCard(nameCardValue, linkCardValue) {
     }
     img.addEventListener('click', openPopupImage);
     return element;
-}
+};
+
+// Функция закрытие попапа кнопкой Esc
+function closePopupByEscape(evt) {
+    if (evt.key === 'Escape') {
+        const popupOpened = document.querySelector('.popup_opened');
+        closePopup(popupOpened);
+    }
+};
+
+document.addEventListener('keydown', closePopupByEscape);
+
+// Функция закрытие попапа кликом на оверлей
+popups.forEach((popup) => {
+    popup.addEventListener('click', closePopupByOverlay);
+});
+
+function closePopupByOverlay(evt) {
+    if (event.target == event.currentTarget) {
+        closePopup(evt.target);
+    };
+};

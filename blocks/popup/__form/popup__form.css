@@ -2,7 +2,11 @@
     margin: 40px 36px 37px;
     display: flex;
     flex-direction: column;
-    row-gap: 23px;
+    row-gap: 14px;
+}
+
+.popup__form:invalid {
+    border-bottom: 1px solid #FF0000;
 }
 
 @media screen and (max-width: 580px) {

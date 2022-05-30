@@ -8,13 +8,13 @@
     background-color: white;
     border-radius: 10px;
     min-width: 430px;
-    max-height: 330px;
+    min-height: 330px;
 }
 
 @media screen and (max-width: 580px) {
     .popup__container {
         min-width: 282px;
         top: 21%;
-        max-height: 322px;
+       /* max-height: 322px;*/
     }
 }
