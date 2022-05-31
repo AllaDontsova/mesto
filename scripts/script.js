@@ -24,13 +24,10 @@ const title = document.querySelector('.popup__title');
 function openPopup(popup) {
     popup.classList.add('popup_opened');
     document.addEventListener('keydown', closePopupByEscape);
-    setEventListenerInput(popup, config);
 }
 
 function closePopup(popup) {
     popup.classList.remove('popup_opened');
-    inputNameCardPopupAddCard.value = '';
-    inputLinkPopupAddCard.value = '';
     document.removeEventListener('keydown', closePopupByEscape);
 }
 
@@ -39,6 +36,9 @@ function openPopupProfile() {
     inputNamePopupProfile.value = profileName.textContent;
     inputPersonalInfoPopupProfile.value = profileSubtitle.textContent;
     openPopup(popupProfile);
+    const inputList = Array.from(formProfileEdit.querySelector('.popup__input'));
+    const buttonSavePopup = formProfileEdit.querySelector('.popup__save');
+    offPopupSaveBtn(inputList, buttonSavePopup, config);
 }
 
 // Функции для закрытия попап-профиль
@@ -57,11 +57,14 @@ function handleProfileFormSubmit(evt) {
 // Функция открытия попап добавления карточек
 function openPopupAddCard() {
     openPopup(popupAddCard);
+    addFormValidation(popupAddCard, config);
 }
 
 // Функция закрытия попап добавления карточек
 function closePopupAddCard() {
-    closePopup(popupAddCard);
+    closePopup(popupAddCard);    
+    inputNameCardPopupAddCard.value = '';
+    inputLinkPopupAddCard.value = '';
 }
 
 // Функция добавления новой карточки

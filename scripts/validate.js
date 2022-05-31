@@ -26,7 +26,7 @@ const hideInputError = (formElement, inputElement, configInputValidation) => {
     error.textContent = '';
 };
 
-// Функция проверки поля на валидность
+// Функция проверки поля на валидность(отображение ошибки)
 const checkInputValidity = (formElement, inputElement, configParametr) => {
     const { inputErrorClass, errorClass } = configParametr;
     if (!inputElement.validity.valid) {
@@ -54,7 +54,8 @@ const offPopupSaveBtn = (inputList, button, configValidation) => {
     }
 };
 
-const setEventListenerInput = (formElement, configValidationInput) => {
+// Функция добавления валидации на форму
+const addFormValidation = (formElement, configValidationInput) => {
     const { inputSelector, submitButtonSelector, inputErrorClass, errorClass } = configValidationInput;
     const inputList = Array.from(formElement.querySelectorAll(`.${inputSelector}`));
     const buttonSavePopup = formElement.querySelector(`.${submitButtonSelector}`);
@@ -67,6 +68,7 @@ const setEventListenerInput = (formElement, configValidationInput) => {
     });
 };
 
+// Функция добавдения валидации на все формы
 const enableValidation = (configValidation) => {
     const { formSelector } = configValidation;
     const formList = Array.from(document.querySelectorAll(`.${formSelector}`));
@@ -74,7 +76,7 @@ const enableValidation = (configValidation) => {
         formElement.addEventListener('submit', function (evt) {
             evt.preventDefault();
         });
-        setEventListenerInput(formElement, configValidation);
+        addFormValidation(formElement, configValidation);
     });
 };
 enableValidation(config);
