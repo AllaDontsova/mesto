@@ -13,6 +13,11 @@
     margin-left: auto;
 }
 
+.profile__add-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 .profile__add-button:hover {
     opacity: 0.6;
 }
