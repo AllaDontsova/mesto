@@ -62,7 +62,7 @@ function openPopupAddCard() {
 
 // Функция закрытия попап добавления карточек
 function closePopupAddCard() {
-    closePopup(popupAddCard);    
+    closePopup(popupAddCard);
     inputNameCardPopupAddCard.value = '';
     inputLinkPopupAddCard.value = '';
 }
@@ -81,14 +81,10 @@ function closePopupImage() {
 
 // Обработчики попап-профиль
 buttonOpenPopupProfile.addEventListener('click', openPopupProfile);
-buttonClosePopupProfile.addEventListener('click', closePopupProfile);
 formProfileEdit.addEventListener('submit', handleProfileFormSubmit);
 // Обработчики попап-карточки
 buttonOpenPopupAddCard.addEventListener('click', openPopupAddCard);
-buttonClosePopupAddCard.addEventListener('click', closePopupAddCard);
 formAddCard.addEventListener('submit', handleAddCardFormSubmit);
-// Обработчик попап-картинки
-buttonClosePopupImage.addEventListener('click', closePopupImage);
 
 // Создание карточек из массива на странице
 initialCards.forEach((item) => {
