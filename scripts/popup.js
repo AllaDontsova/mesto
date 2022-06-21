@@ -1,5 +1,5 @@
 // Функции открытия и закрытия попапов
-export function openPopup(popup) {
+/* export function openPopup(popup) {
     popup.classList.add('popup_opened');
     document.addEventListener('keydown', closePopupByEscape);
 };
@@ -14,4 +14,4 @@ function closePopupByEscape(evt) {
         const openedPopup = document.querySelector('.popup_opened');
         closePopup(openedPopup);
     }
-};
+}; */

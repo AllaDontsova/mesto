@@ -1,12 +1,10 @@
-import { openPopup, closePopup } from './popup.js';
-
 export class Card {
-    constructor(data, selectorTemplate, popupImage) {
+    constructor(data, selectorTemplate, handleCardClick) {
         const { name, link } = data;
         this._name = name;
         this._link = link;
         this._selectorTemplate = selectorTemplate;
-        this._popupImage = popupImage;
+        this._handleCardClick = handleCardClick;
     }
 
     //Создание экземпляра карточки
@@ -41,18 +39,6 @@ export class Card {
         return this._element;
     }
 
-    _handlerOpenPopup = () => {
-        openPopup(this._popupImage);
-        const image = this._popupImage.querySelector('.popup__image');
-        const title = this._popupImage.querySelector('.popup__title');
-        image.src = this._link;
-        title.textContent = this._name;
-    }
-    
-    _handlerClosePopup = () => {
-        closePopup(this._popupImage);
-    }
-
     _handlerLikeCard = () => {
         this._likeButton.classList.toggle('element__like_active');
     }
@@ -62,7 +48,9 @@ export class Card {
     }
 
     _setEventListeners = () => {
-        this._image.addEventListener('click', this._handlerOpenPopup);
+        this._image.addEventListener('click', () => {
+            this._handleCardClick(this._name, this._link);
+        });
         this._likeButton.addEventListener('click', this._handlerLikeCard);
         this._deleteButton.addEventListener('click', this._handlerDeleteCard);
     }

@@ -1,7 +1,6 @@
 import { initialCards, validationConfig } from './constants.js';
 import { Card } from './Cards.js';
 import FormValidator from './FormValidator.js';
-import { openPopup, closePopup } from './popup.js';
 
 const popupProfile = document.querySelector('#popup-profile');
 const popupAddCard = document.querySelector('#popup-addCard');
@@ -18,7 +17,22 @@ const formAddCard = document.querySelector('#addCardContainer');
 const buttonOpenPopupAddCard = document.querySelector('.profile__add-button');
 const cardsContainer = document.querySelector('.elements');
 const popups = document.querySelectorAll('.popup');
+const image = popupImage.querySelector('.popup__image');
+const title = popupImage.querySelector('.popup__title');
 
+/*******************************************************/
+// Функция открытия и закрытия попап
+function openPopup(popup) {
+    popup.classList.add('popup_opened');
+    document.addEventListener('keydown', closePopupByEscape);
+};
+
+function closePopup(popup) {
+    popup.classList.remove('popup_opened');
+    document.removeEventListener('keydown', closePopupByEscape);
+};
+
+/*******************************************************/
 // Функции для открытия попап-профиль
 function openPopupProfile() {
     inputNamePopupProfile.value = profileName.textContent;
@@ -26,7 +40,7 @@ function openPopupProfile() {
     openPopup(popupProfile);
 };
 
-// Функции для закрытия попап-профиль
+// Функции для закрытия попап-ПРОФИЛЬ
 function closePopupProfile() {
     closePopup(popupProfile);
 };
@@ -39,7 +53,8 @@ function handleProfileFormSubmit(evt) {
     closePopupProfile();
 };
 
-// Функция открытия попап добавления карточек
+/********************************************************/
+// Функция открытия попап добавления КАРТОЧЕК
 function openPopupAddCard() {
     openPopup(popupAddCard);
     inputNameCardPopupAddCard.value = '';
@@ -60,6 +75,8 @@ function handleAddCardFormSubmit(evt) {
     closePopupAddCard();
 }
 
+/*********************************************************/
+//Валидация ФОРМ
 const formValidators = {}; // создали объект из форм
 
 Array.from(document.forms).forEach((formElement) => {
@@ -67,7 +84,8 @@ Array.from(document.forms).forEach((formElement) => {
     formValidators[formElement.name].enableValidation();
 });
 
-// Обработчики попап-профиль
+/**********************************************************/
+// ОБРАБОТЧИКИ попап-профиль
 buttonOpenPopupProfile.addEventListener('click', function () {
     openPopupProfile();
     formValidators[formProfileEdit.name].cleanForm();
@@ -83,9 +101,25 @@ buttonOpenPopupAddCard.addEventListener('click', function () {
 
 formAddCard.addEventListener('submit', handleAddCardFormSubmit);
 
+/**************************************************************/
+// Функция открытия попап-КАРТИНКИ 
+function handleCardClick(name, link) {
+    image.src = link;
+    image.alt = name;
+    title.textContent = name;
+    openPopup(popupImage);
+};
+
+// Перебор массива карточек
 initialCards.forEach((item) => {
     appendCard(item);
 });
+
+// Создание новых карточек
+function createCard(data) {
+    const card = new Card(data, "#cards", handleCardClick);
+    return card.getCard();
+};
 
 function appendCard(card) {
     const element = createCard(card);
@@ -97,9 +131,13 @@ function prependCard(nameCardValue, linkCardValue) {
     cardsContainer.prepend(element);
 };
 
-function createCard(data) {
-    const card = new Card(data, "#cards", popupImage);
-    return card.getCard();
+/************************************************************/
+// Функция закрытия попап Escape
+function closePopupByEscape(evt) {
+    if (evt.key === 'Escape') {
+        const openedPopup = document.querySelector('.popup_opened');
+        closePopup(openedPopup);
+    }
 };
 
 // Функция закрытие попапа кликом на оверлей и крестик
